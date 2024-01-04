@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  font-family: "Red Hat Text", sans-serif;
+  font-weight: 700;
+  background: url(images/bg-stars.svg) no-repeat,
+    url(images/pattern-hills.svg) repeat-x bottom,
+    linear-gradient(to bottom, hsl(234, 17%, 12%), hsl(234, 17%, 12%));
+  height: 100vh;
+}
+
+main {
+  padding: 8.45rem 0 2rem;
+  max-width: 43rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header {
+  font-size: 1.26rem;
+  letter-spacing: 0.55rem;
+  text-transform: uppercase;
+  margin-bottom: 6.6rem;
+  color: hsl(236, 31%, 73%);
+}
+
+.timer {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.timer > * {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.timer-boxs {
+  padding: 1.1rem 0;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.timer-boxs::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 0%;
+  left: 0%;
+  background-color: hsl(235, 22%, 23%);
+  z-index: -1;
+  border-radius: 0.5rem 0.5rem;
+}
+
+.timer-boxs::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 50%;
+  left: 0%;
+  background-color: hsl(236, 21%, 26%);
+  z-index: -1;
+  border-radius: 0.5rem;
+}
+
+.timer-boxs span {
+  font-size: 5rem;
+  display: block;
+  color: hsl(345, 95%, 68%);
+}
+
+.timer > * > h3 {
+  margin-top: 1.5rem;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: hsl(237, 18%, 59%);
+}
+
+.social-media {
+  margin-top: 15.75rem;
+  padding-bottom: 2.25rem;
+}
+
+.social-media a:nth-of-type(2) {
+  margin: 0 2rem;
+}
+
+@media (max-width: 600px) {
+  main {
+    width: 90%;
+    padding: 15rem 0;
+  }
+
+  .timer {
+    gap: 0.5rem;
+  }
+
+  .timer-boxs span {
+    font-size: 2rem;
+  }
+
+  .timer > * > h3 {
+    font-size: 0.6rem;
+  }
+
+  .social-media {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0;
+  }
+}
